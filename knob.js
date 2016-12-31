@@ -1,3 +1,10 @@
+// creates a knob object (requires jquery)
+// id will be id of the div of the knob, html id naming rules apply
+// there will be a parent div prefixed by 'box' and a child div prefixed by 'pointer'.
+// callback function should have one argument, which will be the knob value
+// cont is whether or not the knob is continuous
+// knob.html must be added somewhere to the html body before running knob.init()
+// the continuous variable will default to false
 function knob(id, callback, continuous) {
   //declare default values
   var parent = this;
@@ -10,7 +17,7 @@ function knob(id, callback, continuous) {
   this.continuous = continuous || false;
 
   //creates html for div
-  this.html = "<div id='box'" + id + ">"
+  this.html = "<div id='box" + id + "'>"
   this.html += "<div id='" + id + "'>"
   this.html += "<div id='pointer" + id + "'></div></div></div>"
 
