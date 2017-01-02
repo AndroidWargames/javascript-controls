@@ -5,7 +5,6 @@
 // cont is whether or not the knob is continuous
 // knob.html must be added somewhere to the html body before running knob.init()
 // the continuous variable will default to false
-
 function knob(id, callback, continuous) {
   //declare default values
   var parent = this;
@@ -18,10 +17,9 @@ function knob(id, callback, continuous) {
   this.continuous = continuous || false;
 
   //creates html for div
-  this.html = "<div id='box" + id + "' class='knobBox'>"
-  this.html += "<div id='" + id + "' class='knob'>"
-  this.html += "<div id='pointer" + id
-  this.html += "' class='knobPointer'></div></div></div>"
+  this.html = "<div id='box" + id + "'>"
+  this.html += "<div id='" + id + "'>"
+  this.html += "<div id='pointer" + id + "'></div></div></div>"
 
   //define CSS for attributes, scales pretty
   this.applyCSS = function(size) {
